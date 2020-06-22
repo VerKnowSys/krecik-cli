@@ -1,0 +1,14 @@
+[package]
+name = "krecik-cli"
+version = "0.1.0"
+authors = ["Daniel (dmilith) Dettlaff <daniel@me.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+krecik = "0.6.7"
+log = "0.4.8"
+fern = { version = "0.6.0", features = ["colored"] }
+colored = "1.9.3"
+chrono = "0.4.11"
