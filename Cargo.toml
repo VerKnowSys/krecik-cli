@@ -1,7 +1,12 @@
 [package]
 name = "krecik-cli"
 version = "0.2.0"
-authors = ["Daniel (dmilith) Dettlaff <daniel@me.com>"]
+authors = ["Daniel (dmilith) Dettlaff <dmilith@me.com>"]
+description = "Asynchronous, parallel external service checker (and reporter), using industry standard libraries: Curl, ngHTTP2 and OpenSSL."
+keywords = ["curl", "web", "check", "tls-expire", "openssl"]
+categories = ["asynchronous", "concurrency"]
+homepage = "https://github.com/VerKnowSys/krecik-cli"
+license = "MIT"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
