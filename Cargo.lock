@@ -659,9 +659,9 @@ dependencies = [
 
 [[package]]
 name = "krecik"
-version = "0.6.7"
+version = "0.6.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f37bb244ce9315e3d9f9db30b3e904d9253f3f3dcebfe196947249753b5affe9"
+checksum = "772c9fc60e989b772b0c38613ca6a2d786413a8662fa3fe1ba4e50a14b4465cf"
 dependencies = [
  "abstract-ns",
  "bencher",
