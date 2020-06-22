@@ -52,7 +52,7 @@ fn main() -> Result<(), Error> {
     };
     setup_logger(logger_level).unwrap_or_default();
 
-    if env::args().len() == 0 {
+    if env::args().len() == 1 {
         Err(Error::new(
             ErrorKind::InvalidData,
             "You have to specify path(s) to json check file!",
