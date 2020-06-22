@@ -9,7 +9,7 @@
 
 2. Set values for `alert_webhook` and `alert_channel` for your checks (only Slack is supported).
 
-3. Run `bin/run` to perform your checks.
+3. Run `bin/run` to perform your checks. Run with `DEBUG=1` (`DEBUG=1 bin/run`) to show detailed debug output from Krecik.
 
 
 
