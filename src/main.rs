@@ -63,49 +63,6 @@ fn main() -> Result<(), Error> {
                 info!("Loading check from: {}", &check_file);
                 let history = execute_checks_from_file(&check_file);
                 debug!("History: {:?}", history);
-                for story in history.stories() {
-                    match story {
-                        Story {
-                            success: Some(success_msg),
-                            error: None,
-                            ..
-                        } => info!("Check SUCCESS: {}", success_msg.to_string().green()),
-
-                        Story {
-                            success: None,
-                            error: Some(error_msg),
-                            ..
-                        } => {
-                            error!(
-                                "Web-page Story of: FAILURE: {}",
-                                error_msg.to_string().red()
-                            )
-                        }
-
-                        Story {
-                            success: None,
-                            error: None,
-                            ..
-                        } => {
-                            warn!(
-                                "Web-page Story of: WARNING: {}",
-                                "Ambiguous Story that lacks both success and error?!".yellow()
-                            )
-                        }
-
-                        Story {
-                            success: Some(_),
-                            error: Some(_),
-                            ..
-                        } => {
-                            warn!(
-                                "Web-page Story of: WARNING: {}",
-                                "Ambiguous Story with success and failure at the same time?!"
-                                    .yellow()
-                            )
-                        }
-                    }
-                }
             } else {
                 return Err(Error::new(
                     ErrorKind::NotFound,
