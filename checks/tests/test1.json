@@ -44,6 +44,16 @@
             ]
         },
         {
+            "url": "http://fdgrtjkgengjkdfnglksfdgsdfg.com",
+            "expects": [
+                "ValidNoAddress",
+                "ValidNoLength",
+                {
+                    "ValidCode": 0
+                }
+            ]
+        },
+        {
             "url": "http://rust-lang.org/",
             "expects": [
                 {
