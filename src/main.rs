@@ -21,7 +21,6 @@ extern crate log;
 use chrono::*;
 use colored::Colorize;
 use krecik::api::*;
-use krecik::products::story::Story;
 use log::*;
 use std::io::{Error, ErrorKind};
 use std::{env, env::var, path::Path};
@@ -45,7 +44,7 @@ fn setup_logger(level: LevelFilter) -> Result<(), fern::InitError> {
 }
 
 
-fn main() -> Result<(), Error> {
+fn main() {
     let logger_level = match var("DEBUG") {
         Ok(value) => LevelFilter::Debug,
         Err(_) => LevelFilter::Info,
@@ -53,23 +52,16 @@ fn main() -> Result<(), Error> {
     setup_logger(logger_level).unwrap_or_default();
 
     if env::args().len() == 1 {
-        Err(Error::new(
-            ErrorKind::InvalidData,
-            "You have to specify path(s) to json check file!",
-        ))
+        error!("You have to specify path(s) to json check file!")
     } else {
         for check_file in env::args().skip(1).collect::<Vec<String>>() {
             if Path::new(&check_file).exists() {
-                info!("Loading check from: {}", &check_file);
+                info!("Loading check from: {}", &check_file.green());
                 let history = execute_checks_from_file(&check_file);
-                debug!("History: {:?}", history);
+                debug!("History: {:?}", &history);
             } else {
-                return Err(Error::new(
-                    ErrorKind::NotFound,
-                    format!("Check file not found: {}", check_file),
-                ));
+                error!("Check file not found: {}", &check_file.red())
             }
         }
-        Ok(())
     }
 }

@@ -3,7 +3,7 @@
 
 ### Run checks!
 
-0. Install Rust stable with Rustup: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`.
+0. Install Rust stable with Rustup: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`. Install `curl-dev` and `openssl-dev` packages if you're on Linux.
 
 1. Define your checks as json files under `checks/tests/`.
 
