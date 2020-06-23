@@ -1,6 +1,6 @@
 [package]
 name = "krecik-cli"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Daniel (dmilith) Dettlaff <dmilith@me.com>"]
 description = "Asynchronous, parallel external service checker (and reporter), using industry standard libraries: Curl, ngHTTP2 and OpenSSL."
 keywords = ["curl", "web", "check", "tls-expire", "openssl"]
@@ -12,8 +12,8 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# in local dev mode: krecik = { path = "../krecik" }
-krecik = "0.6.8"
+# krecik = { path = "../krecik" }
+krecik = "0.6.9"
 
 log = "0.4.8"
 fern = { version = "0.6.0", features = ["colored"] }
