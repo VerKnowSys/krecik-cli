@@ -257,9 +257,9 @@ dependencies = [
 
 [[package]]
 name = "curl"
-version = "0.4.29"
+version = "0.4.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "762e34611d2d5233a506a79072be944fddd057db2f18e04c0d6fa79e3fd466fd"
+checksum = "b0447a642435be046540f042950d874a4907f9fee28c0513a0beb3ba89f91eb7"
 dependencies = [
  "curl-sys",
  "libc",
@@ -272,9 +272,9 @@ dependencies = [
 
 [[package]]
 name = "curl-sys"
-version = "0.4.31+curl-7.70.0"
+version = "0.4.32+curl-7.70.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dcd62757cc4f5ab9404bc6ca9f0ae447e729a1403948ce5106bd588ceac6a3b0"
+checksum = "834425a2f22fdd621434196965bf99fbfd9eaed96348488e27b7ac40736c560b"
 dependencies = [
  "cc",
  "libc",
@@ -288,9 +288,9 @@ dependencies = [
 
 [[package]]
 name = "domain"
-version = "0.5.1"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39a8705d7f3c401345e559988545d0123250d76aedaf83a31db9bc639c9c6c33"
+checksum = "99d25f0ad5b7518bf97b736d4c4a5b6f73239a4dbe0dcc01e47fe1f39eda8249"
 dependencies = [
  "rand 0.7.3",
 ]
@@ -318,15 +318,6 @@ dependencies = [
 
 [[package]]
 name = "error-chain"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9435d864e017c3c6afeac1654189b06cdb491cf2ff73dbf0d73b0f292f42ff8"
-dependencies = [
- "backtrace",
-]
-
-[[package]]
-name = "error-chain"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff511d5dc435d703f4971bc399647c9bc38e20cb41452e3b9feb4765419ed3f3"
@@ -340,6 +331,7 @@ version = "0.12.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d371106cc88ffdfb1eabd7111e432da544f16f3e2d7bf1dfe8bf575f1df045cd"
 dependencies = [
+ "backtrace",
  "version_check",
 ]
 
@@ -659,9 +651,9 @@ dependencies = [
 
 [[package]]
 name = "krecik"
-version = "0.6.9"
+version = "0.6.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef17db88180286af15ec4357e08b1260d78b9300a5337200bc70e38281d1c4a8"
+checksum = "3f8421b1c17acf991c5c0c61c50b49fb2d522ba444695b73b69b16352ef57d57"
 dependencies = [
  "abstract-ns",
  "bencher",
@@ -682,7 +674,7 @@ dependencies = [
  "serde_derive",
  "serde_json",
  "slack-hook",
- "ssl-expiration",
+ "ssl-expiration2",
 ]
 
 [[package]]
@@ -908,9 +900,9 @@ checksum = "1ab52be62400ca80aa00285d25253d7f7c437b7375c4de678f5405d3afe82ca5"
 
 [[package]]
 name = "openssl"
-version = "0.10.29"
+version = "0.10.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cee6d85f4cb4c4f59a6a85d5b68a233d280c82e29e822913b9c8b129fbf20bdd"
+checksum = "8d575eff3665419f9b83678ff2815858ad9d11567e082f5ac1814baba4e2bcb4"
 dependencies = [
  "bitflags",
  "cfg-if",
@@ -1394,9 +1386,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.55"
+version = "1.0.56"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec2c5d7e739bc07a3e73381a39d61fdb5f671c60c1df26a130690665803d8226"
+checksum = "3433e879a558dde8b5e8feb2a04899cf34fdde1fafb894687e52105fc1162ac3"
 dependencies = [
  "itoa",
  "ryu",
@@ -1459,13 +1451,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "ssl-expiration"
-version = "0.1.2"
+name = "ssl-expiration2"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2c8b4a79f741ad390f65c2770e1b64b0201f00d6b41d56db8d75fbb61d0a5f88"
+checksum = "b709cd0115bfe1d713a0086cc000ec1c3c0981c3bfafde4edf881d3a4a977b0f"
 dependencies = [
- "error-chain 0.10.0",
- "foreign-types-shared",
+ "error-chain 0.12.2",
  "openssl",
  "openssl-sys",
 ]
