@@ -659,7 +659,9 @@ dependencies = [
 
 [[package]]
 name = "krecik"
-version = "0.6.8"
+version = "0.6.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ef17db88180286af15ec4357e08b1260d78b9300a5337200bc70e38281d1c4a8"
 dependencies = [
  "abstract-ns",
  "bencher",
@@ -685,7 +687,7 @@ dependencies = [
 
 [[package]]
 name = "krecik-cli"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "chrono",
  "colored",
