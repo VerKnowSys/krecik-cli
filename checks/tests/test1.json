@@ -2,26 +2,23 @@
     "name": "Testcheck",
     "domains": [
         {
-            "name": "google.com",
+            "name": "verknowsys.com",
             "expects": [
                 {
-                    "ValidExpiryPeriod": 100
+                    "ValidExpiryPeriod": 10
                 }
             ]
         }
     ],
     "pages": [
         {
-            "url": "http://google.com/",
+            "url": "http://verknowsys.com/",
             "expects": [
                 {
                     "ValidCode": 200
                 },
                 {
-                    "ValidContent": "Google"
-                },
-                {
-                    "ValidContent": "<title"
+                    "ValidContent": "Versatile"
                 }
             ],
             "options": {
