@@ -125,9 +125,9 @@ checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
 
 [[package]]
 name = "chrono"
-version = "0.4.11"
+version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "80094f509cf8b5ae86a4966a39b3ff66cd7e2a3e594accec3743ff3fabeab5b2"
+checksum = "c74d84029116787153e02106bf53e66828452a4b325cc8652b788b5967c0a0b6"
 dependencies = [
  "num-integer",
  "num-traits",
@@ -253,6 +253,16 @@ dependencies = [
  "autocfg 1.0.0",
  "cfg-if",
  "lazy_static",
+]
+
+[[package]]
+name = "ctrlc"
+version = "3.1.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a4ba686dff9fa4c1c9636ce1010b0cf98ceb421361b0bb3d6faeec43bd217a7"
+dependencies = [
+ "nix",
+ "winapi 0.3.8",
 ]
 
 [[package]]
@@ -651,9 +661,9 @@ dependencies = [
 
 [[package]]
 name = "krecik"
-version = "0.6.10"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f8421b1c17acf991c5c0c61c50b49fb2d522ba444695b73b69b16352ef57d57"
+checksum = "98e8e7a770ec80d93a21910cee78aa3015dcb54f99d3b63878e56b2645257095"
 dependencies = [
  "abstract-ns",
  "bencher",
@@ -683,8 +693,10 @@ version = "0.2.1"
 dependencies = [
  "chrono",
  "colored",
+ "ctrlc",
  "fern",
  "krecik",
+ "lockfile",
  "log",
 ]
 
@@ -729,6 +741,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c4da24a77a3d8a6d4862d95f72e6fdb9c09a643ecdb402d754004a557f2bec75"
 dependencies = [
  "scopeguard",
+]
+
+[[package]]
+name = "lockfile"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e9b01c4735c76fec1c390661ac8794722f0af0b5eb742500308f94b2caae40f"
+dependencies = [
+ "log",
 ]
 
 [[package]]
@@ -850,6 +871,19 @@ dependencies = [
  "cfg-if",
  "libc",
  "winapi 0.3.8",
+]
+
+[[package]]
+name = "nix"
+version = "0.17.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "50e4785f2c3b7589a0d0c1dd60285e1188adac4006e8abd6dd578e1567027363"
+dependencies = [
+ "bitflags",
+ "cc",
+ "cfg-if",
+ "libc",
+ "void",
 ]
 
 [[package]]
@@ -1452,9 +1486,9 @@ dependencies = [
 
 [[package]]
 name = "ssl-expiration2"
-version = "0.2.0"
+version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b709cd0115bfe1d713a0086cc000ec1c3c0981c3bfafde4edf881d3a4a977b0f"
+checksum = "441553a59252d28b36153eb46d7e475abf70ca6b25f1eb1a9b555b6762805f3f"
 dependencies = [
  "error-chain 0.12.2",
  "openssl",
